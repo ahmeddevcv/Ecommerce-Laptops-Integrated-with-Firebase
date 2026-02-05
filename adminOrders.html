@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Order Management</title>
+    <link rel="stylesheet" href="productAdmin.css">
+  </head>
+  <body>
+        <nav class="admin-nav">
+                    <a href="products.html">Products Like user</a>
+  <a href="adminCategories.html">Categories</a>
+  <a href="adminProducts.html">Products</a>
+  <a href="adminOrders.html">Orders</a>
+</nav>
+    <h1>Order Management</h1>
+
+    <!-- Orders Table -->
+    <h2>Pending Orders</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>User ID</th>
+          <th>Items</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="ordersTable">
+        <tr>
+          <td colspan="5" style="text-align: center; padding: 20px;">
+            Click "Show Orders" to display the list
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div style="text-align: center; margin-top: 20px;">
+        <button type="button" class="btn btn-warning" onclick="showOrders()">Refresh Orders</button>
+    </div>
+
+    <!-- View Order Details Modal -->
+    <div id="viewModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Order Details</h2>
+          <span class="close" onclick="closeViewModal()">&times;</span>
+        </div>
+        <div id="orderDetailsContent">
+            <!-- Order details will be populated here -->
+        </div>
+        <div style="text-align: center; margin-top: 15px;">
+            <button type="button" class="btn btn-secondary" onclick="closeViewModal()">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/js/adminOrders.js">
+      
+    </script>
+      <script type="module" src="ui-nav.js"></script>
+
+  </body>
+</html>
+

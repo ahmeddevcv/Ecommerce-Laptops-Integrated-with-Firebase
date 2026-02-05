@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+<header class="header">
+  <div class="logo">🛒 MyStore</div>
+
+  <nav class="nav">
+    <a href="home.html" class="active">Home</a>
+    <a href="products.html">Products</a>
+    <!-- Login -->
+    <a href="login.html" id="loginBtn">Login</a>
+    <a href="cart.html">Cart</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="orders.html">Orders</a>
+    <a href="previousOrders.html">Previous Orders</a>
+        <!-- User name -->
+    <span id="userName" class="nav-user" style="display:none"></span>
+    <!-- Logout -->
+    <a href="#" id="logoutBtn" style="display:none">Logout</a>
+    <!-- Admin -->
+         <!-- <a href="./adminProducts.html">Admin</a> -->
+    <a href="./adminProducts.html" id="adminLink" style="display:none">Admin</a>
+  </nav>
+
+
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to MyStore</h1>
+    <p>Discover amazing products with great deals.</p>
+    <a href="products.html" class="btn">Shop Now</a>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://i.postimg.cc/8PR6W4Lx/1_Dell_G15_5520.webp" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>$20</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.postimg.cc/PrWwZy1g/2_HP_Victus_16_Gaming_Laptop.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>$35</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.postimg.cc/vHrV9hWG/3_lenovo_legion_5_gaming_laptop_amd_ryzen7.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>$50</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.postimg.cc/CLGqD7jT/4_ASUS_TUF_F15_Gaming_Laptop.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>$50</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 MyStore. All rights reserved.</p>
+  </footer>
+    <script type="module" src="ui-nav.js"></script>
+
+</body>
+
+</html>

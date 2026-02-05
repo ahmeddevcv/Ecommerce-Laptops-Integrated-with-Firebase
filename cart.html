@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+<header class="header">
+  <div class="logo">🛒 MyStore</div>
+
+  <nav class="nav">
+    <a href="home.html" class="active">Home</a>
+    <a href="products.html">Products</a>
+    <!-- Login -->
+    <a href="login.html" id="loginBtn">Login</a>
+    <a href="cart.html">Cart</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="orders.html">Orders</a>
+    <a href="previousOrders.html">Previous Orders</a>
+        <!-- User name -->
+    <span id="userName" class="nav-user" style="display:none"></span>
+    <!-- Logout -->
+    <a href="#" id="logoutBtn" style="display:none">Logout</a>
+    <!-- Admin -->
+         <!-- <a href="./adminProducts.html">Admin</a> -->
+    <a href="./adminProducts.html" id="adminLink" style="display:none">Admin</a>
+  </nav>
+</header>
+<div class="cart-container">
+  <h2>Your Shopping Cart 🛒</h2>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-summary">
+    <p>Total: $<span id="totalPrice">0</span></p>
+    <button class="btn-checkout" id="checkoutBtn">Checkout</button>
+    <button class="btn-clear" id="clearBtn">Clear Cart</button>
+  </div>
+</div>
+
+<script type="module" src="ui-cart.js"></script>
+  <script type="module" src="ui-nav.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+<header class="header">
+  <div class="logo">🛒 MyStore</div>
+  <nav class="nav">
+    <a href="home.html" class="active">Home</a>
+    <a href="products.html">Products</a>
+    <!-- Login -->
+    <a href="login.html" id="loginBtn">Login</a>
+    <a href="cart.html">Cart</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="orders.html">Orders</a>
+    <a href="previousOrders.html">Previous Orders</a>
+        <!-- User name -->
+    <span id="userName" class="nav-user" style="display:none"></span>
+    <!-- Logout -->
+    <a href="#" id="logoutBtn" style="display:none">Logout</a>
+    <!-- Admin -->
+         <!-- <a href="./adminProducts.html">Admin</a> -->
+    <a href="./adminProducts.html" id="adminLink" style="display:none">Admin</a>
+  </nav>
+</header>
+  <!-- Main Content -->
+<main class="product-details-page">
+  <div id="productDetails" class="product-details-card">
+    <!-- Details we get by JS -->
+  </div>
+</main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 MyStore. All rights reserved.</p>
+  </footer>
+
+<script type="module" src="productDetails.js"></script>
+  <script type="module" src="ui-nav.js"></script>
+
+</body>
+</html>

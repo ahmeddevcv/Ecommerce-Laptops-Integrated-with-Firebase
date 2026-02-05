@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+<!-- Header -->
+<header class="header">
+  <div class="logo">🛒 MyStore</div>
+
+  <nav class="nav">
+    <a href="home.html" class="active">Home</a>
+    <a href="products.html">Products</a>
+    <!-- Login -->
+    <a href="login.html" id="loginBtn">Login</a>
+    <a href="cart.html">Cart</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="orders.html">Orders</a>
+    <a href="previousOrders.html">Previous Orders</a>
+        <!-- User name -->
+    <span id="userName" class="nav-user" style="display:none"></span>
+    <!-- Logout -->
+    <a href="#" id="logoutBtn" style="display:none">Logout</a>
+    <!-- Admin -->
+         <!-- <a href="./adminProducts.html">Admin</a> -->
+    <a href="./adminProducts.html" id="adminLink" style="display:none">Admin</a>
+  </nav>
+</header>
+
+  <!-- <header class="header">
+    <h1>🛒 MyStore - Products</h1>
+  </header> -->
+
+  <main class="products-page">
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+    </select>
+
+    <h2>Our Products</h2>
+    <div class="product-grid">
+    </div>
+
+  </main>
+  <script type="module" src="ui-auth.js"></script>
+  <script type="module" src="ui-nav.js"></script>
+  <script type="module" src="ui-products.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Orders</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- Header -->
+<header class="header">
+  <div class="logo">🛒 MyStore</div>
+
+  <nav class="nav">
+    <a href="home.html" class="active">Home</a>
+    <a href="products.html">Products</a>
+    <!-- Login -->
+    <a href="login.html" id="loginBtn">Login</a>
+    <a href="cart.html">Cart</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="orders.html">Orders</a>
+    <a href="previousOrders.html">Previous Orders</a>
+        <!-- User name -->
+    <span id="userName" class="nav-user" style="display:none"></span>
+    <!-- Logout -->
+    <a href="#" id="logoutBtn" style="display:none">Logout</a>
+    <!-- Admin -->
+         <!-- <a href="./adminProducts.html">Admin</a> -->
+    <a href="./adminProducts.html" id="adminLink" style="display:none">Admin</a>
+  </nav>
+</header>
+<div class="order-item" data-order-id="${orderId}">
+  <h2>Your Orders 📦</h2>
+  <div id="ordersList"></div>
+</div>
+
+<script type="module" src="ui-orders.js"></script>
+  <script type="module" src="ui-nav.js"></script>
+
+</body>
+</html>
+<!-- 
+
+-->

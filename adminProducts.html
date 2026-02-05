@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Management</title>
+  <link rel="stylesheet" href="productAdmin.css">
+</head>
+
+<body>
+
+  <nav class="admin-nav">
+    <a href="products.html">Products Like user</a>
+    <a href="adminCategories.html">Categories</a>
+    <a href="adminProducts.html">Products</a>
+    <a href="adminOrders.html">Orders</a>
+  </nav>
+
+  <h1>Product Management</h1>
+
+  <!-- Add Product Form -->
+  <div class="form-container">
+    <h2>Add New Product</h2>
+    <form id="productForm">
+      <div class="form-row">
+        <div>
+          <label for="productName">Product Name:</label>
+          <input type="text" id="productName" placeholder="Enter product name" required>
+        </div>
+        <div>
+          <label for="productPrice">Price:</label>
+          <input type="number" id="productPrice" placeholder="Enter price" step="0.01" required>
+        </div>
+        <div>
+          <label for="categorySelect">Category:</label>
+          <select id="categorySelect" required>
+            <option value="">Select Category</option>
+          </select>
+        </div>
+        <div>
+          <label for="productStock">Stock:</label>
+          <input type="number" id="productStock" placeholder="Enter stock quantity" min="0" required>
+        </div>
+        <div>
+          <label for="productImage">Product Image:</label>
+          <input type="file" id="productImage" accept="image/*" required>
+        </div>
+      </div>
+      <label for="productDescription">Description:</label>
+      <textarea id="productDescription" placeholder="Enter product description" rows="3"></textarea>
+      <button type="submit" class="btn btn-primary">Add Product</button>
+      <button type="button" class="btn btn-warning" onclick="showProducts()">Show Products</button>
+    </form>
+  </div>
+
+  <!-- Products Table -->
+  <h2>Products List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Stock</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="productsTable">
+      <tr>
+        <td colspan="7" style="text-align: center; padding: 20px;">
+          Click "Show Products" to display the list
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Edit Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Product</h2>
+        <span class="close" onclick="closeModal()">&times;</span>
+      </div>
+      <form id="editForm">
+        <input type="hidden" id="editProductId">
+        <label for="editProductName">Product Name:</label>
+        <input type="text" id="editProductName" placeholder="Enter product name" required>
+        <label for="editProductPrice">Price:</label>
+        <input type="number" id="editProductPrice" placeholder="Enter price" step="0.01" required>
+        <label for="editCategorySelect">Category:</label>
+        <select id="editCategorySelect" required>
+          <option value="">Select Category</option>
+        </select>
+        <label for="editProductStock">Stock:</label>
+        <input type="number" id="editProductStock" placeholder="Enter stock quantity" min="0" required>
+        <label for="editProductDescription">Description:</label>
+        <textarea id="editProductDescription" placeholder="Enter product description" rows="3"></textarea>
+        <div style="text-align: center; margin-top: 15px;">
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+          <button type="button" class="btn btn-danger" onclick="closeModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="/js/adminProducts.js"> </script>
+    <script type="module" src="ui-nav.js"></script>
+
+</body>
+
+</html>
