@@ -1,0 +1,16 @@
+# Build أو dist folders
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Firebase config keys if existed
+firebaseConfig.js
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
