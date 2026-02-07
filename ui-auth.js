@@ -39,6 +39,7 @@ onAuthStateChanged(auth, async (user) => {
   } else {
     // logged out
     loginBtn && (loginBtn.style.display = "inline-block");
+    // if (loginBtn)  loginBtn.style.display = "inline-block";
     logoutBtn && (logoutBtn.style.display = "none");
     userNameSpan && (userNameSpan.style.display = "none");
     adminLink && (adminLink.style.display = "none");
@@ -98,7 +99,7 @@ if (loginForm) {
       await login(email, password);
       window.location.href = "products.html";
     } catch (err) {
-      alert(err.message);
+      alert("Invalid email or password");
     }
   });
 }

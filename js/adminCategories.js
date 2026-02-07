@@ -3,8 +3,13 @@ import {
     addCategory,
     updateCategory,
     deleteCategory,
-} from "/js/categoriesfb.js";
+} from "../categories.js";
 import * as fb from "../firebase.js";
+
+import { protectPage } from "../auth.js";
+
+// checkout need login
+protectPage("admin");
 
 console.log(fb.auth);
 console.log(fb.auth.currentUser);

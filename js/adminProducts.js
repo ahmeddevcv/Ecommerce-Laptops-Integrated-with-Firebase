@@ -3,11 +3,13 @@ import {
     addProduct,
     updateProduct,
     deleteProduct,
-} from "./productsfb.js";
-import { getCategories } from "./categoriesfb.js";
+} from "../products.js";
+import { getCategories } from "../categories.js";
 import * as fb from "../firebase.js";
+import { protectPage } from "../auth.js";
 
-
+// checkout need login
+protectPage();
 
 // console.log(fb.auth);
 // console.log(await fb.auth.currentUser.uid);

@@ -2,12 +2,20 @@ import {
     getPendingOrders,
     acceptOrder,
     rejectOrder,
-} from "/js/ordersfb.js";
-import { getProductByID } from "/js/productsfb.js";
+} from "../orders.js";
+import { getProductByID } from "../products.js";
 import * as fb from "../firebase.js";
+import { protectPage } from "../auth.js";
+
+// checkout need login
+protectPage("admin");
+
 
 console.log(fb.auth);
 console.log(fb.auth.currentUser);
+
+
+
 
 // Wait for auth to initialize before accessing currentUser
 fb.auth.onAuthStateChanged((user) => {
